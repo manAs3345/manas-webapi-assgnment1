@@ -45,7 +45,7 @@ Example:<br/>
 >Example:<br/>
 >`const booksToBorrow = book.getAvailableBooks();`<br/>`console.log(booksToBorrow);`
 
-**borrowBook(bookName, bookAuthor)** - Changes the status of a book from "Available" to "Borrowed". The user can borrow a book one at a time using this method.
+**borrowBook(bookName, bookAuthor)** - Changes the status of a book from "Available" to "Borrowed". The user can borrow one book at a time using this method.
 
 >Parameter(s):<br/>
 > `bookName` - the name of the book to borrow<br/>
@@ -53,7 +53,7 @@ Example:<br/>
 Example:<br/>
 >`const borrowBook = book.borrowBook("Beholder","Ryan La Sala");`<br/>`console.log(booksToBorrow);`
 
-**returnBook(bookName, bookAuthor)** - Changes the status of a book from "Borrowed" to "Available" provided the book has status of "Borrowed". The user can return a book one at a time using this method.
+**returnBook(bookName, bookAuthor)** - Changes the status of a book from "Borrowed" to "Available" provided the book has status of "Borrowed". The user can return one book at a time using this method.
 
 >Parameter(s):<br/>
  > `bookName` - the name of the book to return<br/>
