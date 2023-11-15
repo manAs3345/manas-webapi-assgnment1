@@ -10,7 +10,7 @@ For some tips in formatting text in readme file, refer to https://docs.github.co
 
 # Assignment 1 - Library System
 
-The Library System consists of a book module. This module allows communication with the books in the library thats stored as an json file. The user can find books based on genre, author the books name and the available books in the library. Users are also able to borrow and return books. 
+The Library System consists of a book module. This module allows communication with the books in the library. The user can find books based on genre, author, the books name and the available books in the library. Users are also able to borrow and return books. 
 
 ## Getting Started
 
