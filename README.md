@@ -18,7 +18,7 @@ To make use of the functions create an `app.js` file.
 
 In order to view the output of the functions. create a variable in `app.js` and assign it to the module. 
 
->`const book = require('books.js');`
+>`const book = require('./books.js');`
 
 Once you have imported the module, use the functions provided in the module to interact with the library system. Make use of `console.log()` to display the result in the console. 
 

@@ -1,13 +1,13 @@
-const booksData = require("./booksInfo.json");
+const booksData = require("./books.json");
 const fs = require('fs');
 
-const allBooks = booksData.books;
+//const allBooks = booksData.books;
 
 //this function returns the current date in the dd-mm-yyyy format
 function formatDate(){
-    const dd = new Date().getDate().toString();
-    const mm = new Date().getMonth().toString();
-    const yyyy = new Date().getFullYear().toString();
+    const dd = new Date().toLocaleDateString("en-SG",{day:'numeric'})
+    const mm = new Date().toLocaleDateString("en-SG",{month:'numeric'})
+    const yyyy = new Date().toLocaleDateString("en-SG",{year:'numeric'})
 
     return `${dd}-${mm}-${yyyy}`;
 }
@@ -15,7 +15,7 @@ function formatDate(){
 module.exports = {
     // Returns all the books in the json file
     getAllBooks() {
-        return allBooks;
+        return booksData.books;
     },
     //Returns all the books that are of the genre passed in getBooksByGenre()
     getBooksByGenre(genreName){
@@ -70,7 +70,7 @@ module.exports = {
             });
             return `${bookName} successfully borrowed`;
         }else{
-            return 'Unable to borrow book...';
+            return `Unable to borrow book ${bookName}`;
         }
         
     },
@@ -95,9 +95,12 @@ module.exports = {
             });
             return `${bookName} returned successfully`;
         }else{
-            return "Book has not been borrowed";
+            return `Unable to return book ${bookName}`;
         }
         
+    },
+    getDate(){
+        return formatDate();
     },
 
     
