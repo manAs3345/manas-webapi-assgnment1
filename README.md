@@ -14,38 +14,38 @@ Once you have imported the module, use the functions provided in the module to i
 
 ## Functions of the Library System
 
-**getAllBooks()** - Returns the information of all the books that are available in the library
+**getAllBooks()** - Returns the information of all the books that are available in the library.
 
 >Example:<br/>
 >`const allBooks = book.getAllBooks();`<br/>`console.log(allBooks);`
 
-**getBooksByGenre(genreName)** - Returns the information of the books with the genre that is passed into the method
+**getBooksByGenre(genreName)** - Returns the information of the books with the genre that is passed into the method.
 
 >Parameter(s): <br/>
 `genreName` - the genre to search all the books by <br/>
 Example:<br/>
 >`const allArtBooks = book.getBooksByGenre("Art");`<br/>`console.log(allArtBooks);`
 
-**getBooksByAuthor(authorName)** - Returns the information of the books thats written by the author that is passed into the method
+**getBooksByAuthor(authorName)** - Returns the information of the books thats written by the author that is passed into the method.
 
 >Parameter(s):<br/>
 `authorName` - the name of the author to search all the books by<br/>
 Example:<br/>
 >`const hwBooks = getBooksByAuthor("Henry Winkler");`<br/>`console.log(hwBooks);`
 
-**getBookByName(bookName)** - Returns the book information of the book name thats passed into the method as a parameter
+**getBookByName(bookName)** - Returns the book information of the book name thats passed into the method as a parameter.
 
 >Parameter(s):<br/>
 > `bookName` - the name of the book to search for <br/>
 Example:<br/>
 >`const beholderBookInfo = book.getBookByName("Beholder");`<br/>`console.log(beholderBookInfo);`
 
-**getAvailableBooks()** - Returns the book info of all the books that are available for borrowing
+**getAvailableBooks()** - Returns the book info of all the books that are available for borrowing.
 
 >Example:<br/>
 >`const booksToBorrow = book.getAvailableBooks();`<br/>`console.log(booksToBorrow);`
 
-**borrowBook(bookName, bookAuthor)** - Changes the status of a book to Borrowed in the JSON file which allows users to borrow one book at a time
+**borrowBook(bookName, bookAuthor)** - Changes the status of a book from "Available" to "Borrowed". The user can borrow a book one at a time using this method.
 
 >Parameter(s):<br/>
 > `bookName` - the name of the book to borrow<br/>
@@ -53,7 +53,7 @@ Example:<br/>
 Example:<br/>
 >`const borrowBook = book.borrowBook("Beholder","Ryan La Sala");`<br/>`console.log(booksToBorrow);`
 
-**returnBook(bookName, bookAuthor)** - Changes the status of a book from "Borrowed" to "Available" provided the book has status of "Borrowed". The user can return a book one at a time using this method
+**returnBook(bookName, bookAuthor)** - Changes the status of a book from "Borrowed" to "Available" provided the book has status of "Borrowed". The user can return a book one at a time using this method.
 
 >Parameter(s):<br/>
  > `bookName` - the name of the book to return<br/>

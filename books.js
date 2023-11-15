@@ -12,7 +12,7 @@ function formatDate(){
 module.exports = {
     // Returns all the books in the json file
     getAllBooks() {
-        return booksData.books;
+        return booksData.books
     },
     //Returns all the books that are of the genre passed in getBooksByGenre()
     getBooksByGenre(genreName){
