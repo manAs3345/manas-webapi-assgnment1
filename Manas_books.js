@@ -12,10 +12,12 @@ function formatDate(){
 module.exports = {
     // Returns all the books in the json file
     getAllBooks() {
-        return booksData.books
+        const allBooks = booksData.books;
+        return allBooks;
     },
     //Returns all the books that are of the genre passed in getBooksByGenre()
     getBooksByGenre(genreName){
+        const allBooks = booksData.books;
         const genreBooks = allBooks.filter((book)=>book.genre == genreName);
         if (Object.keys(genreBooks).length ==  0) {
             return "Couldn't find books of the genre: " + genreName;
@@ -27,6 +29,7 @@ module.exports = {
     },
     //Returns books written by the author pased in getBooksByAuthor()
     getBooksByAuthor(authorName){
+        const allBooks = booksData.books;
         const authorBooks = allBooks.filter((book)=>book.author == authorName);
         if (Object.keys(authorBooks).length ==  0) {
             return "Couldn't find books written by: " + authorName;
@@ -37,8 +40,9 @@ module.exports = {
     },
     //Returns a book based on the name
     getBookByName(bookName){
-       const bookByName = allBooks.filter((book)=>book.name == bookName);
-       return bookByName;
+        const allBooks = booksData.books;
+        const bookByName = allBooks.filter((book)=>book.name == bookName);
+        return bookByName;
     },
     //Returns all books which are available to borrow (of the status "Available")
     getAvailableBooks(){
@@ -96,9 +100,4 @@ module.exports = {
         }
         
     },
-    getDate(){
-        return formatDate();
-    },
-
-    
 }
