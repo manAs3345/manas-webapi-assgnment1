@@ -1,8 +1,5 @@
 const booksData = require("./books.json");
 const fs = require('fs');
-
-//const allBooks = booksData.books;
-
 //this function returns the current date in the dd-mm-yyyy format
 function formatDate(){
     const dd = new Date().toLocaleDateString("en-SG",{day:'numeric'})
@@ -70,7 +67,7 @@ module.exports = {
             });
             return `${bookName} successfully borrowed`;
         }else{
-            return `Unable to borrow book ${bookName}`;
+            return `Unable to borrow book ${bookName}. This book has been borrowed.`;
         }
         
     },
@@ -95,7 +92,7 @@ module.exports = {
             });
             return `${bookName} returned successfully`;
         }else{
-            return `Unable to return book ${bookName}`;
+            return `Unable to return book ${bookName}. Borrow the book first.`;
         }
         
     },
